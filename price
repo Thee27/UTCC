@@ -8,4 +8,4 @@ end = '2023-9-01'
 stock_price=stock.history(interval=interval,start=start,end=end)
 print(stock_price)
 stock_price.index = stock_price.index.tz_localize(None)
-stock_price.to_excel('ราคา10ปี.xlsx', index=False)
+stock_price.to_excel('ราคา10ปี.xlsx')
