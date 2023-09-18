@@ -1,0 +1,10 @@
+import yfinance as yf
+
+#เปลี่ยนชื่อหุ้นกับวันที่ได้ตามสบายเลย
+stock = yf.Ticker('aot.bk')
+interval = '1d'
+start = '2013-9-01'
+end = '2023-9-01'
+stock_price=stock.history(interval=interval,start=start,end=end)
+print(stock_price)
+stock_price.to_excel('ราคา10ปี.xlsx', index=False)
